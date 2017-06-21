@@ -1,0 +1,10 @@
+xn = 0.12 * [1 2 3 4 5 6];
+fn = [0.79168 -0.01834 -0.01129 0.00134 0.00038 -0.0001];
+qa = newton(0.231, fn(1:3), xn(1:3), 0.12);
+qb = newton(0.231, fn(1:4), xn(1:4), 0.12);
+y = newton(0.231, fn, xn, 0.12);
+fprintf('qa: ');
+fprintf('%.10f ', qa-y);
+fprintf('\nqb: ');
+fprintf('%.10f ', qb-y);
+fprintf('\n');
